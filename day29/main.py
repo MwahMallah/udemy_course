@@ -2,9 +2,22 @@ from tkinter import *
 import random
 from tkinter import messagebox
 import pyperclip
+import json
 
 CANVAS_WIDTH = 200
 CANVAS_HEIGHT = 200
+
+def search_website():
+    website = website_entry.get()
+    try:
+        with open("data.json", "r") as data_file:
+            data = json.load(data_file)
+        password = data[website]["password"]
+        email = data[website]["email"]
+    except (FileNotFoundError, KeyError):
+        messagebox.showinfo(title="Error", message="No details for website exists")
+    else:
+        messagebox.showinfo(title=website, message=f"Email: {email}\nPassword: {password}")
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 #Password Generator Project
@@ -34,18 +47,30 @@ def add_password():
     password = password_entry.get()
     password_entry.delete(0, len(password))
 
-    if_ok = False
+    new_entry = {
+        website : {
+            "email": email,
+            "password": password,
+        }
+    }
 
-    if website and password and email:
-        is_ok = messagebox.askokcancel(title=website, message=f"These details are entered: Email: {email}\nPassword: {password}\n")
-    else:
+    if len(website) == 0 or len(password) == 0 or len(email) == 0:
         messagebox.showinfo(title="Ooops", message="Don't leave any fields empty!")
+    else:
+        try:
+            with open("data.json", "r") as data_file:
+                data = json.load(data_file)
 
-    if is_ok:
-        with open(file="data.txt", mode="a") as f:
-            f.write(f"{website} | {email} | {password}\n")
-    
+        except FileNotFoundError:
+            with open("data.json", "w") as data_file:
+                json.dump(new_entry, data_file, indent=4)
 
+        else:
+            data.update(new_entry)
+            with open("data.json", "w") as data_file:
+                json.dump(data, data_file, indent=4)
+
+                    
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.config(padx=50, pady=50)
@@ -59,8 +84,11 @@ lock_logo.grid(row=0, column=1)
 website_label = Label(master=window, text="Website:")
 website_label.grid(row=1, column=0)
 website_entry = Entry()
-website_entry.grid(row=1, column=1, columnspan=2, sticky="ew")
+website_entry.grid(row=1, column=1, columnspan=1, sticky="w")
 website_entry.focus()
+
+search_button = Button(text="Search", command=search_website)
+search_button.grid(column=2, row=1, sticky="ew")
 
 email_label = Label(master=window, text="Email/Username:")
 email_label.grid(row=2, column=0)
