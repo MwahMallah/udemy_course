@@ -26,9 +26,3 @@ for bd in bd_data:
             connection.starttls()
             connection.login(user=user, password=password)
             connection.sendmail(from_addr=user, to_addrs=bd['email'], msg=f"Subject:Happy Birthday!!!\n\n{letter}")
-
-
-
-
-
-
