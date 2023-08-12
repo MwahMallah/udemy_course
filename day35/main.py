@@ -13,7 +13,7 @@ params = {
 }
 
 accound_sid = "ACca28382aac15d0dae2f45cb03013796e"
-auth_token = "2eb09f03e3f841a651bb13e1a9483c4c"
+auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
 phone_number = "+15736523525"
 
 
