@@ -12,7 +12,7 @@ params = {
     "exclude":"current,minutely,daily"
 }
 
-accound_sid = "ACca28382aac15d0dae2f45cb03013796e"
+accound_sid = os.environ.get("TWILIO_ACC_SID")
 auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
 phone_number = "+15736523525"
 
