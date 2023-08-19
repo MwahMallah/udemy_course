@@ -1,0 +1,36 @@
+{
+    "exercises": [
+        {
+            "tag_id": 317,
+            "user_input": "running",
+            "duration_min": 6.22,
+            "met": 9.8,
+            "nf_calories": 71.12,
+            "photo": {
+                "highres": "https://d2xdmhkmkbyw75.cloudfront.net/exercise/317_highres.jpg",
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/exercise/317_thumb.jpg",
+                "is_user_uploaded": false
+            },
+            "compendium_code": 12050,
+            "name": "running",
+            "description": null,
+            "benefits": null
+        },
+        {
+            "tag_id": 258,
+            "user_input": "boxing",
+            "duration_min": 120,
+            "met": 7.8,
+            "nf_calories": 1092,
+            "photo": {
+                "highres": "https://d2xdmhkmkbyw75.cloudfront.net/exercise/258_highres.jpg",
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/exercise/258_thumb.jpg",
+                "is_user_uploaded": false
+            },
+            "compendium_code": 15120,
+            "name": "boxing",
+            "description": null,
+            "benefits": null
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "search_id": "3166f907-a726-443b-b257-328708bc70f6",
+    "currency": "CZK",
+    "fx_rate": 24.056214,
+    "data": [
+        {
+            "id": "145c1cb24cb4000019957ecb_0|1cb2145c4cb800002ac9d438_0",
+            "flyFrom": "PRG",
+            "flyTo": "BVA",
+            "cityFrom": "Prague",
+            "cityCodeFrom": "PRG",
+            "cityTo": "Paris",
+            "cityCodeTo": "PAR",
+            "countryFrom": {
+                "code": "CZ",
+                "name": "Czechia"
+            },
+            "countryTo": {
+                "code": "FR",
+                "name": "France"
+            },
+            "local_departure": "2023-10-06T06:00:00.000Z",
+            "utc_departure": "2023-10-06T04:00:00.000Z",
+            "local_arrival": "2023-10-06T07:40:00.000Z",
+            "utc_arrival": "2023-10-06T05:40:00.000Z",
+            "nightsInDest": 4,
+            "quality": 98.137126,
+            "distance": 875.17,
+            "duration": {
+                "departure": 6000,
+                "return": 5700,
+                "total": 11700
+            },
+            "price": 1158,
+            "conversion": {
+                "CZK": 1158,
+                "EUR": 48.137251
+            },
+            "fare": {
+                "adults": 1158,
+                "children": 1158,
+                "infants": 1158
+            },
+            "bags_price": {
+                "1": 61.404,
+                "2": 122.808
+            },
+            "baglimit": {
+                "hand_height": 40,
+                "hand_length": 55,
+                "hand_weight": 10,
+                "hand_width": 20,
+                "hold_dimensions_sum": 319,
+                "hold_height": 119,
+                "hold_length": 119,
+                "hold_weight": 20,
+                "hold_width": 81,
+                "personal_item_height": 25,
+                "personal_item_length": 40,
+                "personal_item_weight": 10,
+                "personal_item_width": 20
+            },
+            "availability": {
+                "seats": None
+            },
+            "airlines": [
+                "FR"
+            ],
+            "route": [
+                {
+                    "id": "145c1cb24cb4000019957ecb_0",
+                    "combination_id": "145c1cb24cb4000019957ecb",
+                    "flyFrom": "PRG",
+                    "flyTo": "BVA",
+                    "cityFrom": "Prague",
+                    "cityCodeFrom": "PRG",
+                    "cityTo": "Paris",
+                    "cityCodeTo": "PAR",
+                    "local_departure": "2023-10-06T06:00:00.000Z",
+                    "utc_departure": "2023-10-06T04:00:00.000Z",
+                    "local_arrival": "2023-10-06T07:40:00.000Z",
+                    "utc_arrival": "2023-10-06T05:40:00.000Z",
+                    "airline": "FR",
+                    "flight_no": 1828,
+                    "operating_carrier": "",
+                    "operating_flight_no": "",
+                    "fare_basis": "",
+                    "fare_category": "M",
+                    "fare_classes": "",
+                    "fare_family": "",
+                    "return": 0,
+                    "bags_recheck_required": False,
+                    "vi_connection": False,
+                    "guarantee": False,
+                    "equipment": None,
+                    "vehicle_type": "aircraft"
+                },
+                {
+                    "id": "1cb2145c4cb800002ac9d438_0",
+                    "combination_id": "1cb2145c4cb800002ac9d438",
+                    "flyFrom": "BVA",
+                    "flyTo": "PRG",
+                    "cityFrom": "Paris",
+                    "cityCodeFrom": "PAR",
+                    "cityTo": "Prague",
+                    "cityCodeTo": "PRG",
+                    "local_departure": "2023-10-10T08:05:00.000Z",
+                    "utc_departure": "2023-10-10T06:05:00.000Z",
+                    "local_arrival": "2023-10-10T09:40:00.000Z",
+                    "utc_arrival": "2023-10-10T07:40:00.000Z",
+                    "airline": "FR",
+                    "flight_no": 1829,
+                    "operating_carrier": "",
+                    "operating_flight_no": "",
+                    "fare_basis": "",
+                    "fare_category": "M",
+                    "fare_classes": "",
+                    "fare_family": "",
+                    "return": 1,
+                    "bags_recheck_required": False,
+                    "vi_connection": False,
+                    "guarantee": False,
+                    "equipment": None,
+                    "vehicle_type": "aircraft"
+                }
+            ],
+            "booking_token": "G8kJybWkd0NXo5kvBxJWeL5Yo6L164P987SZuy3Xdo0S-G2VMqhw-7_Kpct9YA1Rj9DL-td3U4Ajc2-n3FHJ-ccWRGrQSLDSOE-H7bS3UHVNaTAHCmZ9M3yL4uU9ZyuuYJn_1-VcoCXqlit8k1mfKociRFeadNk4QF7W_lxFfqCr80T_sfXKol27Oz93CoLAKBN4YpXW_4nVMW8HAuNKqMQFFwGIRLBznLZ28SlVOy9sKC6B0HIPrlmnQBSTdhi-8NAYzA9f0lVVZLNfcM79ipg4XNSqBqIaPVMT7kk3wFuWYJypcu9yHJyh9BIrOOj9gKkgm9MvrTbGwa5mmWA0ow4Ri_apoT-RYSENsdvlRBxAzaVKjuZKK6UuyTfo74Obiuj8fZeOeGQsiMPBr5rSsOIhwlkSGQAMCP7xpYF18wN76GyAdKiclgWcncOoCPoI-E3eW2W5LMfdSSpblefUd2qrGCBl3NPpM9rUIEj6UpW5n-PvQGYHNZn5UKYKjmqxiHZOfXjRv3JAei5lQ3RaVFVL1KNIrGFcXTqRPlnB79fE=",
+            "deep_link": "https://www.kiwi.com/deep?affilid=mwahmallahtest&currency=CZK&flightsId=145c1cb24cb4000019957ecb_0%7C1cb2145c4cb800002ac9d438_0&from=PRG&lang=en&passengers=1&to=BVA&booking_token=G8kJybWkd0NXo5kvBxJWeL5Yo6L164P987SZuy3Xdo0S-G2VMqhw-7_Kpct9YA1Rj9DL-td3U4Ajc2-n3FHJ-ccWRGrQSLDSOE-H7bS3UHVNaTAHCmZ9M3yL4uU9ZyuuYJn_1-VcoCXqlit8k1mfKociRFeadNk4QF7W_lxFfqCr80T_sfXKol27Oz93CoLAKBN4YpXW_4nVMW8HAuNKqMQFFwGIRLBznLZ28SlVOy9sKC6B0HIPrlmnQBSTdhi-8NAYzA9f0lVVZLNfcM79ipg4XNSqBqIaPVMT7kk3wFuWYJypcu9yHJyh9BIrOOj9gKkgm9MvrTbGwa5mmWA0ow4Ri_apoT-RYSENsdvlRBxAzaVKjuZKK6UuyTfo74Obiuj8fZeOeGQsiMPBr5rSsOIhwlkSGQAMCP7xpYF18wN76GyAdKiclgWcncOoCPoI-E3eW2W5LMfdSSpblefUd2qrGCBl3NPpM9rUIEj6UpW5n-PvQGYHNZn5UKYKjmqxiHZOfXjRv3JAei5lQ3RaVFVL1KNIrGFcXTqRPlnB79fE=",
+            "facilitated_booking_available": False,
+            "pnr_count": 2,
+            "has_airport_change": False,
+            "technical_stops": 0,
+            "throw_away_ticketing": False,
+            "hidden_city_ticketing": False,
+            "virtual_interlining": False
+        }
+    ],
+    "_results": 30
+}

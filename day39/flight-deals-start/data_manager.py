@@ -1,7 +1,7 @@
 #This class is responsible for talking to the Google Sheet.
 import requests
 import os
-from typing import List
+from typing import List, Tuple
 
 SHEETY_BEARER_TOKEN = os.environ.get("SHEETY_BEARER_TOKEN")
 
@@ -14,21 +14,20 @@ class DataManager:
             "Authorization": f"Bearer {SHEETY_BEARER_TOKEN}",
             "Content-Type": "application/json"
         }
+    
+    def get_cities_prices(self) -> List[Tuple]:
+        response = requests.get(url=self.endpoint, headers=self.headers)
+        deals = response.json()['deals']
 
-    def change_name(self):
-        params = {
-            "deal": {
-                "city": "moscow",
-                "iataCode": "PAR",
-                "lowestPrice": 2000
+        return [(deal['iataCode'], deal['lowestPrice'], deal['id'], deal['city']) for deal in deals]
+    
+    def update_price(self, row_in_spreadsheet: int, new_price: int):
+        endpoint = f"{self.endpoint}/{row_in_spreadsheet}"
+        body = {
+            "deal":{
+                "lowestPrice": new_price
             }
         }
 
-        response = requests.put(url=self.endpoint, json=params, headers=self.headers)
+        response = requests.put(url=endpoint, json=body, headers=self.headers)
         print(response.text)
-
-    def get_cities(self) -> List[str]:
-        response = requests.get(url=self.endpoint, headers=self.headers)
-        deals = response.json()['deals']
-        return [deal['city'] for deal in deals]
-        
