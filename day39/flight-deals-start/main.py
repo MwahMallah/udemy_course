@@ -13,6 +13,7 @@ def main():
     for (airport_code, existing_price, row_in_spreadsheet, city) in cities_prices:
 
         flight = flights_data.find_flight_with_cheapest_price(airport_code)
+        print(f"{city}: {flight['price']}")
         if flight["availability"]["seats"] != None:
             new_price = flight["price"]
             
