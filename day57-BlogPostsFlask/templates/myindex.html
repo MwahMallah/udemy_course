@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/mystyles.css">
+</head>
+<body>
+    <div class="top-line"></div>
+    <header>
+        <div class="title">My blog</div>
+    </header>
+    <div class="content">
+        {% for blog_post in blog_posts %}
+        <div class="card">
+            <h2>{{ blog_post['title'] }}</h2>
+            <p>{{ blog_post['subtitle'] }}</p>
+            <a href="{{ url_for('post', id=blog_post['id']) }}">Read</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <p>Made in Brno</p>
+    </footer>
+</body>
+</html>
