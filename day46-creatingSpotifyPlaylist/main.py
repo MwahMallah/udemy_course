@@ -55,7 +55,7 @@ def create_playlist(date: str, songs: List[str]):
 
 
 window = Tk()
-window.config(padx=50, pady=30, background="#088a5c")
+window.config(padx=50, pady=30, background="#ebae34")
 
 calendar = Calendar(date_pattern='y-mm-dd')
 calendar.grid(column=0, row=0)

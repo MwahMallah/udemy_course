@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Login</title>
+		{{ bootstrap.load_css() }}
+
+	</head>
+	<body>
+        <div class="container">
+		<h1>Login</h1>
+		<form action="{{ url_for('login') }}" method="POST" novalidate>
+			{{ form.csrf_token }}
+			<p>
+				{{ form.email.label }} <br> {{ form.email }}
+				{% for error in form.email.errors %}
+					<span style="color:brown;">{{ error }}</span>
+				{% endfor %}
+			</p>
+			<br>
+			<p>
+				{{ form.password.label }} <br> {{form.password}}
+				{% for error in form.password.errors %}
+					<span style="color: brown;">{{ error }}</span>
+				{% endfor %}
+			</p>
+			{{ form.log_in }}
+		</form>
+        </div>
+	</body>
+</html>
