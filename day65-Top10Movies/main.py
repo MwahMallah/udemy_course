@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import asc
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
@@ -60,7 +61,9 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    movies = Movies.query.all()
+    movies = Movies.query.order_by(asc(Movies.rating))
+    for rank, movie in enumerate(movies[::-1], 1):
+        movie.ranking = rank
     return render_template("index.html", movies=movies)
 
 @app.route("/add", methods=['POST', 'GET'])
